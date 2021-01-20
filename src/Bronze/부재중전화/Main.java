@@ -11,15 +11,11 @@ public class Main {
 		int d = sc.nextInt();
 		int ans = 0;
 		ArrayList<Integer> list = new ArrayList<>();
-		for(int i=0; i<n; i++){
-			for(int j=0; j<l; j++){
-				list.add(0);
-			}
-			for(int j=0; j<5; j++){
-				list.add(1);
-			}
+		for(int i=0; i<n; i++) {
+			for(int j=0; j<l; j++) list.add(0);
+			for(int j=0; j<5; j++) list.add(1);
 		}
-		while(true){
+		while(true) {
 			if(ans>=list.size()) break;
 			if(list.get(ans) == 1) break;
 			else ans += d;

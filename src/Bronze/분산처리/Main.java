@@ -11,9 +11,7 @@ public class Main {
 			int a = sc.nextInt();
 			int b = sc.nextInt();
 			int res = a;
-			for(int i=1; i<b; i++) {
-				res = (res*a)%10;
-			}
+			for(int i=1; i<b; i++) res = (res*a)%10;
 			if(b == 1) res = a%10;
 			if(res == 0) System.out.println(10);
 			else System.out.println(res);
