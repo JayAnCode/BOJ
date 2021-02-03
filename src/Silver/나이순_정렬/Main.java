@@ -15,26 +15,22 @@ public class Main {
 	public static void main(String args[]) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringBuilder sb = new StringBuilder();
 		int n = Integer.parseInt(br.readLine());
-		List<Pair> list = new LinkedList<>();
+		Pair[] p = new Pair[n];
 		for(int i=0; i<n; i++) {
 			StringTokenizer st = new StringTokenizer(br. readLine(), " ");
-			list.add(new Pair(Integer.parseInt(st.nextToken()), st.nextToken()));
+			p[i] = new Pair(Integer.parseInt(st.nextToken()), st.nextToken());
 		}
-		Collections.sort(list, new Comparator<Pair>() {
+		Arrays.sort(p, new Comparator<Pair>() {
 			@Override
 			public int compare(Pair o1, Pair o2) {
-				if(o1.age == o2.age) return o1.name.compareTo(o2.name);
-				else return o1.age-o2.age;
+				return o1.age - o2.age;
 			}
 		});
 		for(int i=0; i<n; i++) {
-			bw.write(list.get(i).age + " " + list.get(i).name);
-			bw.flush();
-			bw.newLine();
+			sb.append(p[i].age + " " + p[i].name + "\n");
 		}
-		br.close();
-		bw.close();
+		System.out.println(sb);
 	}
 }
