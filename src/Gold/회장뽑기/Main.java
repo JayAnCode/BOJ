@@ -1,4 +1,4 @@
-package Silver.회장뽑기;
+package Gold.회장뽑기;
 
 import java.io.*;
 import java.util.*;
