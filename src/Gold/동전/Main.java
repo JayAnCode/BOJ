@@ -26,7 +26,7 @@ public class Main {
 			for(int i=0; i<N; i++) {
 				for(int j=coin[i]; j<M+1; j++) {
 					dp[j] += dp[j-coin[i]];
-				}	// j원을 만들기 위해서는 j-coin[i]월 + coin[i]원을 하면 된다.
+				}	// j원을 만들기 위해서는 j-coin[i]원 + coin[i]원을 하면 된다.
 			}
 
 			sb.append(dp[M]+ "\n");
