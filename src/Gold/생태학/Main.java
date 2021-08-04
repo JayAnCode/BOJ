@@ -6,7 +6,8 @@ import java.util.TreeMap;
 public class Main {
 	static int count;
 	static String s;
-	static TreeMap<String, Integer> tree = new TreeMap<>();
+	static TreeMap<String, Integer> tree = new TreeMap<>();	// KEY를 이름순으로 저장하기 위해 TrreMap 사용
+
 	public static void main(String arg[]) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
@@ -16,8 +17,8 @@ public class Main {
 		if(s == null) return;
 
 		while(s != null && !s.equals("")) {
-			tree.put(s, tree.getOrDefault(s, 0) + 1);
-			count += 1;
+			tree.put(s, tree.getOrDefault(s, 0) + 1);	// TrreMap을 활용해 각 종의 갯수를  카운트
+			count += 1;	// 전체 갯수 카운트
 			s = br.readLine();
 		}
 
